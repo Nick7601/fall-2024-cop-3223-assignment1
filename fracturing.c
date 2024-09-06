@@ -127,7 +127,7 @@ double calculateDistance()
 
     // Prints distance solution and skips a line
 
-    printf("The distance between the two points is %.2f\n", distance);
+    printf("The distance between the two points is %.3f\n", distance);
     printf("\n");
 
     return distance;      
