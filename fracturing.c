@@ -30,7 +30,9 @@
 
 double getX1()
 {
-    double x1 = 3;  // Value of x1
+    double x1;  // Value of x1
+    printf("x1? ");
+    scanf("%lf", &x1);
 
     return x1;
 }
@@ -46,8 +48,9 @@ double getX1()
 
 double getX2()
 {
-    double x2 = 5;  // Value of x2
-
+    double x2;  // Value of x2
+    printf("x2? ");
+    scanf("%lf", &x2);
     return x2;
 }
 
@@ -62,7 +65,9 @@ double getX2()
 
 double getY1()
 {
-    double y1 = 7;  // Value of y1
+    double y1;  // Value of y1
+    printf("y1? ");
+    scanf("%lf", &y1);
 
     return y1;
 }
@@ -78,33 +83,13 @@ double getY1()
 
 double getY2()
 {
-    double y2 = 9;  // Value of y2
+    double y2;  // Value of y2
+    printf("y2? ");
+    scanf("%lf", &y2);
 
     return y2;
 }
 
-//********************************************************
-// void printPoints()
-//
-// Purpose:         To show the 2 points that were set for the distance formula.
-// Output:          Prints out x1, y1, x2, and y2 for the distance formula.
-// Precondition:    getX1(), getX2(), getY1(), and getY2() returning a value
-// Postcondition:   None
-//********************************************************
-
-void printPoints()
-{
-    double x1 = getX1();    // Calls to X1 function for value
-    double x2 = getX2();    // Calls to X2 function for value
-    double y1 = getY1();    // Calls to Y1 function for value
-    double y2 = getY2();    // calls to Y2 function for value
-    
-    // Prints point #1
-    printf("Point #1 entered: x1 = %.1f ; y1 = %.1f\n", x1, y1);
-
-    // Prints point #2
-    printf("Point #2 entered: x2 = %.1f ; y2 = %.1f\n", x2, y2);
-}
 
 //********************************************************
 // double calculateDistance()
@@ -117,17 +102,22 @@ void printPoints()
 
 double calculateDistance()
 {
+    double x1 = getX1();    // Calls to X1 function for value
+    double x2 = getX2();    // Calls to X2 function for value
+    double y1 = getY1();    // Calls to Y1 function for value
+    double y2 = getY2();    // Calls to Y2 function for value
+
     // Gets the distance with the distance formula
 
-    double distance = sqrt(pow(getX2() - getX1(), 2) + pow(getY2() - getY1(), 2));
+    double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 
     // Prints point #1 and #2
+    printf("Point #1 entered: x1 = %.1f ; y1 = %.1f\n", x1, y1);
 
-    printPoints();
-
+    printf("Point #2 entered: x2 = %.1f ; y2 = %.1f\n", x2, y2);
+    
     // Prints distance solution and skips a line
-
-    printf("The distance between the two points is %.3f\n", distance);
+    printf("The distance between the two points is %.2f\n", distance);
     printf("\n");
 
     return distance;      
