@@ -23,33 +23,34 @@ double getX1();
 double getX2();
 double getY1();
 double getY2();
-double calculateDistance(double x1, double x2, double y1, double y2);
-double calculatePerimeter(double x1, double x2, double y1, double y2);
+void print(double x1, double x2, double y1, double y2);
+double calculateDistance();
+double calculatePerimeter();
 
-int main(int argc, char **argv)
-{
-    double X1input = getX1();
-    double X2input = getX2();
-    double Y1input = getY1();
-    double Y2input = getY2();
+// int main(int argc, char **argv)
+// {
+//     double X1input = getX1();
+//     double X2input = getX2();
+//     double Y1input = getY1();
+//     double Y2input = getY2();
 
-    // Shows output of calculateDistance() function in terminal
-    double showDistance = calculateDistance(X1input, X2input, Y1input, Y2input);
+//     // Shows output of calculateDistance() function in terminal
+//     double showDistance = calculateDistance(X1input, X2input, Y1input, Y2input);
 
-    // Shows output of calculatePerimeter() function in terminal
-    double showPerimeter = calculatePerimeter(X1input, X2input, Y1input, Y2input);
+//     // Shows output of calculatePerimeter() function in terminal
+//     double showPerimeter = calculatePerimeter(X1input, X2input, Y1input, Y2input);
 
-    // Shows output of calculateArea() function in terminal
-    //double showArea = calculateArea();
+//     // Shows output of calculateArea() function in terminal
+//     //double showArea = calculateArea();
 
-    // Shows output of calculateWidth() function in terminal 
-    //double showWidth = calculateWidth();
+//     // Shows output of calculateWidth() function in terminal 
+//     //double showWidth = calculateWidth();
 
-    // Shows output of calculateHeight() functionin terminal
-    //double showHeight = calculateHeight();
+//     // Shows output of calculateHeight() functionin terminal
+//     //double showHeight = calculateHeight();
 
-    return 0;
-} //main
+//     return 0;
+//} //main
 
 //********************************************************
 // double getX1()
@@ -122,6 +123,13 @@ double getY2()
     return y2;
 }
 
+void print(double x1, double x2, double y1, double y2)
+{
+    // Prints point #1 and #2
+    printf("Point #1 entered: x1 = %.1f ; y1 = %.1f\n", x1, y1);
+    printf("Point #2 entered: x2 = %.1f ; y2 = %.1f\n", x2, y2);
+}
+
 
 //********************************************************
 // double calculateDistance()
@@ -132,16 +140,18 @@ double getY2()
 // Postcondition:   None
 //********************************************************
 
-double calculateDistance(double x1, double x2, double y1, double y2)
+double calculateDistance()
 {
+    double x1 = getX1();
+    double x2 = getX2();
+    double y1 = getY1();
+    double y2 = getY2();
+
     // Gets the distance with the distance formula
     double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-
-    // Prints point #1 and #2
-    printf("Point #1 entered: x1 = %.1f ; y1 = %.1f\n", x1, y1);
-    printf("Point #2 entered: x2 = %.1f ; y2 = %.1f\n", x2, y2);
     
     // Prints distance solution and skips a line
+    print(x1, x2, y1, y2);
     printf("The distance between the two points is %.3f\n", distance);
     printf("\n");
 
@@ -158,15 +168,17 @@ double calculateDistance(double x1, double x2, double y1, double y2)
 // Postcondition:   None
 //********************************************************
 
-double calculatePerimeter(double x1, double x2, double y1, double y2)
+double calculatePerimeter()
 {   
     // Gets perimeter with the perimeter formula
-    double perimeter = x1 + x2 + y1 + y2;
+    double radius;
+    double perimeter;
     double difficultyRating;
 
-    // Prints point #1 and #2
-    printf("Point #1 entered: x1 = %.1f ; y1 = %.1f\n", x1, y1);
-    printf("Point #2 entered: x2 = %.1f ; y2 = %.1f\n", x2, y2);
+    printf("Radius: ");
+    scanf("%lf", &radius);
+
+    perimeter = 2 * PI * radius;
 
     // Prints perimeter solution and skips a line
     printf("The perimeter of the city encompassed by your request is %.3f\n", perimeter);
@@ -247,4 +259,30 @@ double calculatePerimeter(double x1, double x2, double y1, double y2)
 //     return difficultyRating;
 // }
 
+int main(int argc, char **argv)
+{
+    double X1input;
+    double X2input;
+    double Y1input;
+    double Y2input;
+
+    
+    // Shows output of calculateDistance() function in terminal
+    double showDistance = calculateDistance();
+
+    // Shows output of calculatePerimeter() function in terminal
+    print(X1input, X2input, Y1input, Y2input);
+    double showPerimeter = calculatePerimeter();
+
+    // Shows output of calculateArea() function in terminal
+    //double showArea = calculateArea();
+
+    // Shows output of calculateWidth() function in terminal 
+    //double showWidth = calculateWidth();
+
+    // Shows output of calculateHeight() functionin terminal
+    //double showHeight = calculateHeight();
+
+    return 0;
+} //main
 // main function - shows all outputs from every function
