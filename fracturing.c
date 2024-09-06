@@ -175,6 +175,12 @@ double calculatePerimeter()
     double perimeter;
     double difficultyRating;
 
+    double x1 = getX1();
+    double x2 = getX2();
+    double y1 = getY1();
+    double y2 = getY2();
+
+    print(x1, x2, y1, y2);
     printf("Radius: ");
     scanf("%lf", &radius);
 
@@ -271,7 +277,7 @@ int main(int argc, char **argv)
     double showDistance = calculateDistance();
 
     // Shows output of calculatePerimeter() function in terminal
-    print(X1input, X2input, Y1input, Y2input);
+    //print(X1input, X2input, Y1input, Y2input);
     double showPerimeter = calculatePerimeter();
 
     // Shows output of calculateArea() function in terminal
