@@ -142,11 +142,6 @@ double calculatePerimeter()
     double perimeter;
     double difficultyRating;
 
-    double x1 = getX1();
-    double x2 = getX2();
-    double y1 = getY1();
-    double y2 = getY2();
-
     print(x1, x2, y1, y2);
     printf("Radius: ");
     scanf("%lf", &radius);
