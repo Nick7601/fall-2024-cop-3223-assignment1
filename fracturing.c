@@ -19,39 +19,6 @@
 // Preprocessor directive for PI
 #define PI 3.14159
 
-double getX1();
-double getX2();
-double getY1();
-double getY2();
-void print(double x1, double x2, double y1, double y2);
-double calculateDistance();
-double calculatePerimeter();
-
-// int main(int argc, char **argv)
-// {
-//     double X1input = getX1();
-//     double X2input = getX2();
-//     double Y1input = getY1();
-//     double Y2input = getY2();
-
-//     // Shows output of calculateDistance() function in terminal
-//     double showDistance = calculateDistance(X1input, X2input, Y1input, Y2input);
-
-//     // Shows output of calculatePerimeter() function in terminal
-//     double showPerimeter = calculatePerimeter(X1input, X2input, Y1input, Y2input);
-
-//     // Shows output of calculateArea() function in terminal
-//     //double showArea = calculateArea();
-
-//     // Shows output of calculateWidth() function in terminal 
-//     //double showWidth = calculateWidth();
-
-//     // Shows output of calculateHeight() functionin terminal
-//     //double showHeight = calculateHeight();
-
-//     return 0;
-//} //main
-
 //********************************************************
 // double getX1()
 //
