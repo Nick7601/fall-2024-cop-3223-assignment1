@@ -152,11 +152,10 @@ double calculatePerimeter()
     // Prints perimeter solution and skips a line
 
     printf("The perimeter of the city encompassed by your request is %.3f\n", perimeter);
-    
+    printf("\n");
 
     printf("How difficult was this function to make (1.0 -5.0)? ");
     scanf("%lf", &difficultyRating);
-    printf("\n");
 
     return difficultyRating;
 }
