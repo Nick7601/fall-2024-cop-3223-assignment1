@@ -135,12 +135,27 @@ double calculateDistance()
 
 double calculatePerimeter()
 {
-    double perimeter = 20;          // Solution to perimeter  
-    double difficultyRating = 2.0;  // Difficulty rating of function from 1.0 - 5.0
+    double x1 = getX1();    // Calls to X1 function for value
+    double x2 = getX2();    // Calls to X2 function for value
+    double y1 = getY1();    // Calls to Y1 function for value
+    double y2 = getY2();    // Calls to Y2 function for value
+    
+    // Gets perimeter with the perimeter formula
+    double perimeter = x1 + x2 + y1 + y2;
+    double difficultyRating;
+
+    // Prints point #1 and #2
+    printf("Point #1 entered: x1 = %.1f ; y1 = %.1f\n", x1, y1);
+
+    printf("Point #2 entered: x2 = %.1f ; y2 = %.1f\n", x2, y2);
 
     // Prints perimeter solution and skips a line
 
-    printf("The perimeter of the city encompassed by your request is %.2f\n", perimeter);
+    printf("The perimeter of the city encompassed by your request is %.3f\n", perimeter);
+    
+
+    printf("How difficult was this function to make (1.0 -5.0)? ");
+    scanf("%lf", &difficultyRating);
     printf("\n");
 
     return difficultyRating;
