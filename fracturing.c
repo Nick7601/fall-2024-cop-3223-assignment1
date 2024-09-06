@@ -19,6 +19,38 @@
 // Preprocessor directive for PI
 #define PI 3.14159
 
+double getX1();
+double getX2();
+double getY1();
+double getY2();
+double calculateDistance(double x1, double x2, double y1, double y2);
+double calculatePerimeter(double x1, double x2, double y1, double y2);
+
+int main(int argc, char **argv)
+{
+    double X1input = getX1();
+    double X2input = getX2();
+    double Y1input = getY1();
+    double Y2input = getY2();
+
+    // Shows output of calculateDistance() function in terminal
+    double showDistance = calculateDistance(X1input, X2input, Y1input, Y2input);
+
+    // Shows output of calculatePerimeter() function in terminal
+    double showPerimeter = calculatePerimeter(X1input, X2input, Y1input, Y2input);
+
+    // Shows output of calculateArea() function in terminal
+    //double showArea = calculateArea();
+
+    // Shows output of calculateWidth() function in terminal 
+    //double showWidth = calculateWidth();
+
+    // Shows output of calculateHeight() functionin terminal
+    //double showHeight = calculateHeight();
+
+    return 0;
+} //main
+
 //********************************************************
 // double getX1()
 //
@@ -100,20 +132,13 @@ double getY2()
 // Postcondition:   None
 //********************************************************
 
-double calculateDistance()
+double calculateDistance(double x1, double x2, double y1, double y2)
 {
-    double x1 = getX1();    // Calls to X1 function for value
-    double x2 = getX2();    // Calls to X2 function for value
-    double y1 = getY1();    // Calls to Y1 function for value
-    double y2 = getY2();    // Calls to Y2 function for value
-
     // Gets the distance with the distance formula
-
     double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 
     // Prints point #1 and #2
     printf("Point #1 entered: x1 = %.1f ; y1 = %.1f\n", x1, y1);
-
     printf("Point #2 entered: x2 = %.1f ; y2 = %.1f\n", x2, y2);
     
     // Prints distance solution and skips a line
@@ -133,24 +158,17 @@ double calculateDistance()
 // Postcondition:   None
 //********************************************************
 
-double calculatePerimeter()
-{
-    double x1 = getX1();    // Calls to X1 function for value
-    double x2 = getX2();    // Calls to X2 function for value
-    double y1 = getY1();    // Calls to Y1 function for value
-    double y2 = getY2();    // Calls to Y2 function for value
-    
+double calculatePerimeter(double x1, double x2, double y1, double y2)
+{   
     // Gets perimeter with the perimeter formula
     double perimeter = x1 + x2 + y1 + y2;
     double difficultyRating;
 
     // Prints point #1 and #2
     printf("Point #1 entered: x1 = %.1f ; y1 = %.1f\n", x1, y1);
-
     printf("Point #2 entered: x2 = %.1f ; y2 = %.1f\n", x2, y2);
 
     // Prints perimeter solution and skips a line
-
     printf("The perimeter of the city encompassed by your request is %.3f\n", perimeter);
     printf("\n");
 
@@ -170,18 +188,18 @@ double calculatePerimeter()
 // Postcondition:   None
 //********************************************************
 
-double calculateArea()
-{
-    double area = 25;               // Solution for area
-    double difficultyRating = 3.0;  // Difficulty rating of function from 1.0 - 5.0
+//double calculateArea()
+// {
+//     double area = 25;               // Solution for area
+//     double difficultyRating = 3.0;  // Difficulty rating of function from 1.0 - 5.0
 
-    // Prints area solution and skips a line
+//     // Prints area solution and skips a line
 
-    printf("The area of the city encompassed by your request is %.2f\n", area);
-    printf("\n");
+//     printf("The area of the city encompassed by your request is %.2f\n", area);
+//     printf("\n");
 
-    return difficultyRating;
-}
+//     return difficultyRating;
+// }
 
 //********************************************************
 // double calculateWidth()
@@ -193,18 +211,18 @@ double calculateArea()
 // Postcondition:   None
 //********************************************************
 
-double calculateWidth()
-{
-    double width = 5;               // Solution for width
-    double difficultyRating = 4.0;  // Difficulty rating of function from 1.0 - 5.0
+//double calculateWidth()
+// {
+//     double width = 5;               // Solution for width
+//     double difficultyRating = 4.0;  // Difficulty rating of function from 1.0 - 5.0
 
-    // Prints width solution and skips a line
+//     // Prints width solution and skips a line
 
-    printf("The width of the city encompassed by your request is %.2f\n", width);
-    printf("\n");
+//     printf("The width of the city encompassed by your request is %.2f\n", width);
+//     printf("\n");
 
-    return difficultyRating;
-}
+//     return difficultyRating;
+// }
 
 //********************************************************
 // double calculateHeight()
@@ -216,37 +234,17 @@ double calculateWidth()
 // Postcondition:   None
 //********************************************************
 
-double calculateHeight()
-{
-    double height = 5;              // Solution for height
-    double difficultyRating = 1.0;  // Difficulty rating of function from 1.0 - 5.0
+//double calculateHeight()
+// {
+//     double height = 5;              // Solution for height
+//     double difficultyRating = 1.0;  // Difficulty rating of function from 1.0 - 5.0
 
-    // Prints height solution and skips a line
+//     // Prints height solution and skips a line
 
-    printf("The height of the city encompassed by your request is %.2f\n", height);
-    printf("\n");
+//     printf("The height of the city encompassed by your request is %.2f\n", height);
+//     printf("\n");
 
-    return difficultyRating;
-}
+//     return difficultyRating;
+// }
 
 // main function - shows all outputs from every function
-
-int main(int argc, char **argv)
-{
-    // Shows output of calculateDistance() function in terminal
-    double showDistance = calculateDistance();
-
-    // Shows output of calculatePerimeter() function in terminal
-    double showPerimeter = calculatePerimeter();
-
-    // Shows output of calculateArea() function in terminal
-    double showArea = calculateArea();
-
-    // Shows output of calculateWidth() function in terminal 
-    double showWidth = calculateWidth();
-
-    // Shows output of calculateHeight() functionin terminal
-    double showHeight = calculateHeight();
-
-    return 0;
-} //main
