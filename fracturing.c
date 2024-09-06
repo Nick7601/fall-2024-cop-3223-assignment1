@@ -138,10 +138,6 @@ double calculatePerimeter()
     double perimeter = 20;          // Solution to perimeter  
     double difficultyRating = 2.0;  // Difficulty rating of function from 1.0 - 5.0
 
-    // Prints point #1 and #2
-
-    printPoints();
-
     // Prints perimeter solution and skips a line
 
     printf("The perimeter of the city encompassed by your request is %.2f\n", perimeter);
@@ -164,10 +160,6 @@ double calculateArea()
 {
     double area = 25;               // Solution for area
     double difficultyRating = 3.0;  // Difficulty rating of function from 1.0 - 5.0
-
-    // Prints point #1 and #2
-
-    printPoints();
 
     // Prints area solution and skips a line
 
@@ -192,10 +184,6 @@ double calculateWidth()
     double width = 5;               // Solution for width
     double difficultyRating = 4.0;  // Difficulty rating of function from 1.0 - 5.0
 
-    // Prints point #1 and #2
-
-    printPoints();
-
     // Prints width solution and skips a line
 
     printf("The width of the city encompassed by your request is %.2f\n", width);
@@ -218,10 +206,6 @@ double calculateHeight()
 {
     double height = 5;              // Solution for height
     double difficultyRating = 1.0;  // Difficulty rating of function from 1.0 - 5.0
-
-    // Prints point #1 and #2
-
-    printPoints();
 
     // Prints height solution and skips a line
 
